@@ -14,6 +14,7 @@ __logger.setLevel(logging.DEBUG)
 
 
 logger = __logger
+streamHandler = __streamHandler
 
 
 

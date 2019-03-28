@@ -23,9 +23,14 @@ def random_call():
     '%(asctime)s | %(levelname)-5s | {} | %(name)s.%(module)s::%(funcName)s: %(message)s'.format(d[threading.current_thread().getName()]),\
     '%Y-%m-%d %H:%M:%S'\
     )
-    streamHandler = logging.StreamHandler()
-    streamHandler.setFormatter(formatter)
-    core.utils.logger.addHandler(streamHandler)
+
+    # WRONG!!!
+    # streamHandler = logging.StreamHandler()
+    # streamHandler.setFormatter(formatter)
+    # core.utils.logger.addHandler(streamHandler)
+
+    # CORRECT :3
+    core.utils.streamHandler.setFormatter(formatter)
 
     l = [
         core.mod1.fantastic,
